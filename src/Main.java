@@ -82,6 +82,29 @@ class latihanMahasiswi{
     }
 }
 
+//04 Setter dan Getter
+class dataNilai{
+    public int nilai;
+    private int IPK;
+    private double nilaiAbsen;
+
+    //construktor
+    public dataNilai() {
+        this.nilai = 0;
+        this.IPK = 0;
+    }
+    
+    //fungsi/method mengembalikan nilai private IPK
+    
+    //getter
+    public int getPrivateIPK(){
+        return this.IPK;
+    }
+    //Setter
+    public void setPrivateNilaiAbsen(double inputNilaiAbsen){
+        this.nilaiAbsen = inputNilaiAbsen;
+    }
+}
 
 
 public class Main {
@@ -147,6 +170,17 @@ public class Main {
         System.out.println(mahasiswa2.nama);
         System.out.println(mahasiswa2.NPM);
         System.out.println(mahasiswa2.jurusan);
+        
+        
+        //04
+        dataNilai DataNilai = new dataNilai();
+        
+        DataNilai.nilai = 100;
+        System.out.println(DataNilai.nilai);
+        
+        System.out.println(DataNilai.getPrivateIPK());
+        
+        DataNilai.setPrivateNilaiAbsen(8.5);
     }
     
 }
