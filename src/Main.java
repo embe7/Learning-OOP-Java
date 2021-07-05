@@ -107,6 +107,25 @@ class dataNilai{
 }
 
 
+// 05 Static atau class atribut atau juga biasa disebut static variabel
+class Display{
+    static String type = "Display";
+    private String name;
+    
+    //constructor
+    Display(String inputName){
+        this.name = inputName;
+    }
+    
+    void setType(String inputType){
+        Display.type = inputType;
+    }
+    
+    void show(){
+        System.out.println("this is name : " + this.name);
+    }
+}
+
 public class Main {
 
 
@@ -181,6 +200,23 @@ public class Main {
         System.out.println(DataNilai.getPrivateIPK());
         
         DataNilai.setPrivateNilaiAbsen(8.5);
+        
+        //05
+        Display display1 = new Display("Suhendri");
+        Display display2 = new Display("Wahyu");
+        display1.show();
+        display2.show();
+        
+        System.out.println("\nMenampilkan Static atau class variabel");
+        System.out.println(display1.type);
+        System.out.println(display2.type);
+        System.out.println(Display.type);
+        
+        System.out.println("\nMerubah type");
+        display1.setType("Tampilan X");
+        System.out.println(display1.type);
+        System.out.println(display2.type);
+        System.out.println(Display.type);
     }
     
 }
